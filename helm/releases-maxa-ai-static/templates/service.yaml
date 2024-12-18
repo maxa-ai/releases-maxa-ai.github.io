@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "releases-maxa-ai-static.fullname" . }}
+  labels:
+    {{- include "releases-maxa-ai-static.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "releases-maxa-ai-static.selectorLabels" . | nindent 4 }}
