@@ -1,6 +1,6 @@
 {
-  "name": "releases-maxa-ai-github-io",
-  "version": "0.0.0",
+  "name": "releases-maxa-ai",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
