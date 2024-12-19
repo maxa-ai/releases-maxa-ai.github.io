@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/maxa-ai/releases-maxa-ai.github.io/compare/releases-maxa-ai-v1.1.0...releases-maxa-ai-v1.2.0) (2024-12-19)
+
+
+### Features
+
+* upgrade docusaurus to v3 ([fe75a36](https://github.com/maxa-ai/releases-maxa-ai.github.io/commit/fe75a362e09ce579acfa43d52e53d776e0bab9ea))
+
 ## [1.1.0](https://github.com/maxa-ai/releases-maxa-ai.github.io/compare/releases-maxa-ai-v1.0.0...releases-maxa-ai-v1.1.0) (2024-12-19)
 
 
