@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "releases-maxa-ai-static.fullname" . }}
+  name: {{ include "releases-maxa-ai.fullname" . }}
   labels:
-    {{- include "releases-maxa-ai-static.labels" . | nindent 4 }}
+    {{- include "releases-maxa-ai.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "releases-maxa-ai-static.fullname" . }}
+    name: {{ include "releases-maxa-ai.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

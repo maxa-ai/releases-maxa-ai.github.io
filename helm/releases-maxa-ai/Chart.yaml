@@ -1,5 +1,5 @@
 apiVersion: v2
-name: releases-maxa-ai-static
+name: releases-maxa-ai
 description: Helm chart to publish a static website in Kubernetes
 
 # A chart can be either an 'application' or a 'library' chart.

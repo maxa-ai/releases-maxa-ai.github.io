@@ -1,12 +1,14 @@
-# Default values for releases-maxa-ai-static.
+# Default values for releases-maxa-ai.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+replicaCount: 1
+
 image:
-  repository: ghcr.io/maxa-ai/releases-maxa-ai.github.io/releases-maxa-ai-static
+  repository: ghcr.io/maxa-ai/releases-maxa-ai.github.io/releases-maxa-ai
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "releases-maxa-ai-v1.3.0"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -75,7 +77,7 @@ readinessProbe:
     port: http
 
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 2
   maxReplicas: 5
   targetCPUUtilizationPercentage: 90
