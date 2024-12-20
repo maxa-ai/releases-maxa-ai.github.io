@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/maxa-ai/releases-maxa-ai.github.io/compare/releases-maxa-ai-v1.3.0...releases-maxa-ai-v1.4.0) (2024-12-20)
+
+
+### Features
+
+* push for build with new tags ([4e30ccf](https://github.com/maxa-ai/releases-maxa-ai.github.io/commit/4e30ccf549f7a97695d5d282aa93d7cce487bf2a))
+
 ## [1.3.0](https://github.com/maxa-ai/releases-maxa-ai.github.io/compare/releases-maxa-ai-v1.2.0...releases-maxa-ai-v1.3.0) (2024-12-20)
 
 
