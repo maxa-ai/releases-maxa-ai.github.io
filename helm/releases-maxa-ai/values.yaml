@@ -10,7 +10,8 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "releases-maxa-ai-v1.3.0"
 
-imagePullSecrets: []
+imagePullSecrets:
+  - name: ghcr
 nameOverride: ""
 fullnameOverride: ""
 
