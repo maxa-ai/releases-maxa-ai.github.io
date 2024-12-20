@@ -3,7 +3,7 @@ name: Docker build and push
 on:
   push:
     tags:
-      - "releases-maxa-ai-[0-9]+.[0-9]+.[0-9]+"
+      - "releases-maxa-ai-v*"
   pull_request:
     branches:
       - main
@@ -42,9 +42,11 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ github.repository }}/${{ matrix.value }}
           tags: |
-            type=match,pattern=-(\d+\.\d+\.\d+)$,group=1
-            type=match,pattern=-(\d+\.\d+)\.\d+$,group=1
-            type=match,pattern=-(\d+)\.\d+\.\d+$,group=1
+            type=match,pattern=releases-maxa-ai-v(\d+\.\d+\.\d+)$,group=1
+            type=match,pattern=releases-maxa-ai-v(\d+\.\d+)\.\d+$,group=1
+            type=match,pattern=releases-maxa-ai-v(\d+)\.\d+\.\d+$,group=1
+            type=sha
+            type=raw,value=latest,enable=true
 
           labels: |
             org.opencontainers.image.title=releases-maxa-ai
