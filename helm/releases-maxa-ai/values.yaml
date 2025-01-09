@@ -48,6 +48,11 @@ ingress:
   enabled: true
   annotations:
     kubernetes.io/ingress.global-static-ip-name: releases-maxa-ai
+  defaultBackend:
+    service:
+      name: releases-maxa-ai
+      port:
+        number: 80
   hosts:
     - host: releases.maxa.ai
       paths:
