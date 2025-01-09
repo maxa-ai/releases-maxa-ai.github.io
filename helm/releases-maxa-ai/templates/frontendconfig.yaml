@@ -1,0 +1,13 @@
+{{- if .Values.ingress.sslRedirect }}
+{{- $fullName := include "releases-maxa-ai.fullname" . -}}
+apiVersion: networking.gke.io/v1beta1
+kind: FrontendConfig
+metadata:
+  labels:
+    {{- include "releases-maxa-ai.labels" . | nindent 4 }}
+  name: {{ $fullName }}
+spec:
+  redirectToHttps:
+    enabled: true
+    responseCodeName: "MOVED_PERMANENTLY_DEFAULT"
+{{- end }}

@@ -46,6 +46,7 @@ service:
 
 ingress:
   enabled: true
+  sslRedirect: true
   annotations:
     kubernetes.io/ingress.global-static-ip-name: releases-maxa-ai
   defaultBackend:
